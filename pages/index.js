@@ -1,16 +1,15 @@
-import React from "react";
-import NewLayout from "../components/NewLayout/NewLayout";
+import React from 'react'
+import NewLayout from '../components/NewLayout/NewLayout'
 
-import PriorityCard from "../components/PriorityCard/PriorityCard";
+import PriorityCard from '../components/PriorityCard/PriorityCard'
 
 const newHome = () => {
   // Constats to pass to PriorityCards
-  const sdrTitle = "Same Day Registration";
-  const sdrPathMap = "/same-day-registration";
-  const sdrPathLetter = "/sdr-letter";
-  const sdrSubHeader = "Why should we have Same Day Registration?";
-  const sdrBlurb =
-    `Currently, MA voters must register twenty days before an election
+  const sdrTitle = 'Same Day Registration'
+  const sdrPathMap = '/same-day-registration'
+  const sdrPathLetter = '/sdr-letter'
+  const sdrSubHeader = 'Why should we have Same Day Registration?'
+  const sdrBlurb = `Currently, MA voters must register twenty days before an election
     in order to participate. Removing this barrier, and allowing eligible
     voters to register up to, and on, election day would allow more
     Massachusetts voters to make their voices heard – a critical aspect
@@ -22,14 +21,13 @@ const newHome = () => {
     saving the time and expense of processing those ballots. Voters registering
     on election day would still be required to provide proof of identity and
     proof of residence, making the process of registration no different from that
-    of the current process.`;
+    of the current process.`
 
-  const emvTitle = "No-Excuse Absentee Voting";
-  const emvPathMap = "/absentee-voting";
-  const emvPathLetter = "/absentee-voting-letter";
-  const emvSubHeader = "Why should we have no-excuse absentee voting?";
-  const emvBlurb =
-    `Representative democracy is stronger when more constituents participate in
+  const emvTitle = 'No-Excuse Absentee Voting'
+  const emvPathMap = '/absentee-voting'
+  const emvPathLetter = '/absentee-voting-letter'
+  const emvSubHeader = 'Why should we have no-excuse absentee voting?'
+  const emvBlurb = `Representative democracy is stronger when more constituents participate in
     elections, and turnout is highest when participation is made easy.
     Massachusetts participation rates in the most recent elections indicate it
     was a success – which stems largely from the emergency acts smartly passed
@@ -39,14 +37,13 @@ const newHome = () => {
     the state to vote early and by absentee ballot. 42% of registered voters in the
     Commonwealth took advantage of the relatively easy means to vote and would likely
     do so again if given the opportunity. Massachusetts should retain these improved
-    voting mechanisms.`;
+    voting mechanisms.`
 
-  const cfaTitle = "Publicly Financed Campaigns";
-  const cfaPathMap = "/campaign-finance";
-  const cfaPathLetter = "/campaign-finance-letter";
-  const cfaSubHeader = "Why should we have publicly funded campaigns?";
-  const cfaBlurb =
-    `We urge the elected officials of Massachusetts to reinstitute public funding
+  const cfaTitle = 'Publicly Financed Campaigns'
+  const cfaPathMap = '/campaign-finance'
+  const cfaPathLetter = '/campaign-finance-letter'
+  const cfaSubHeader = 'Why should we have publicly funded campaigns?'
+  const cfaBlurb = `We urge the elected officials of Massachusetts to reinstitute public funding
     for the elections of qualifying state legislators. Under Common Cause’s
     citizen-funded election proposal, candidates who meet small donor and fundraising
     benchmarks  will receive matching public funding. This additional funding will
@@ -55,12 +52,12 @@ const newHome = () => {
     less time fundraising and spend more time talking to their constituents and
     passing laws on their behalf. Publicly financed elections level the playing field,
     allowing for broader participation in public office, and ultimately lead to laws
-    that better reflect the policy preferences of voters.`;
+    that better reflect the policy preferences of voters.`
 
   // Actually return things
   return (
     <>
-      <NewLayout pageTitle="2021 Priorities">
+      <NewLayout pageTitle='Testing 123'>
         <div>
           {/* A card for each priority, using props defined above */}
           <PriorityCard
@@ -92,10 +89,10 @@ const newHome = () => {
         </div>
       </NewLayout>
     </>
-  );
-};
+  )
+}
 
-export default newHome;
+export default newHome
 
 // import { Layout } from "../components";
 // import styles from "../styles/Home.module.css";
