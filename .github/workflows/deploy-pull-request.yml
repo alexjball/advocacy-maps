@@ -11,7 +11,7 @@ jobs:
     name: Deploy Pull Request
     runs-on: ubuntu-latest
     # Don't build forks, even if actions are enabled
-    if: github.event.workflow_run.conclusion == 'success' && github.repository_owner == 'codeforboston'
+    if: github.event.workflow_run.conclusion == 'success' && github.repository_owner == alexjball
 
     steps:
       - name: Checkout code
