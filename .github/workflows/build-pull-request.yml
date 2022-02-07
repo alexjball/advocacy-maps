@@ -5,7 +5,7 @@ on: [pull_request]
 jobs:
   build:
     # Don't build forks, even if actions are enabled
-    if: github.repository_owner == alexjball
+    if: github.repository_owner == 'alexjball'
     name: Build
     runs-on: ubuntu-latest
 
