@@ -1,5 +1,6 @@
 {
   "projects": {
+    "aball": "maple-aball",
     "default": "digital-testimony-dev",
     "prod": "digital-testimony-prod"
   },

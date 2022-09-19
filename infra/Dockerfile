@@ -10,7 +10,7 @@ COPY functions/package.json functions/yarn.lock ./functions/
 RUN chown -R node:node .
 
 USER node
-RUN yarn install
+RUN yarn install:all
 
 FROM alexjball/firebase-tools:latest-node-16 as firebase
 
