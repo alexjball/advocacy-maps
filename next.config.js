@@ -10,6 +10,10 @@ const config = {
   },
   eslint: {
     dirs: ["pages", "components", "functions/src", "tests"]
+  },
+  i18n: {
+    locales: ["en", "pt"],
+    defaultLocale: "pt"
   }
 }
 
