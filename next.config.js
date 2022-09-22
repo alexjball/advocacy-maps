@@ -13,7 +13,7 @@ const config = {
   },
   i18n: {
     locales: ["en", "pt"],
-    defaultLocale: "pt"
+    defaultLocale: "en"
   }
 }
 
