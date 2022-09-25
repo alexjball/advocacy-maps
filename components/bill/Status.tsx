@@ -1,7 +1,7 @@
 import { last } from "lodash"
 import { useState } from "react"
+import { Button, Modal } from "react-bootstrap"
 import styled from "styled-components"
-import { Button, Modal } from "../bootstrap"
 import { StyledBillTitle, StyledModalTitle } from "./HistoryModal"
 import { HistoryTable } from "./HistoryTable"
 import { BillProps } from "./types"

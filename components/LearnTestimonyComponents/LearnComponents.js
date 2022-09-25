@@ -1,9 +1,9 @@
-import { Container } from "../bootstrap"
-import RoleOfTestimonyCard from "./RoleOfTestimony/RoleOfTestimonyCard"
-import styles from "./LearnTestimonies/LearnTestimoniesCard.module.css"
-import LearnTestimoniesCard from "./LearnTestimonies/LearnTestimoniesCard"
-import LearnTestimoniesCardContent from "./LearnTestimonies/LearnTestimoniesCardContent"
+import { Container } from "react-bootstrap"
 import BasicsOfTestimonyCard from "./BasicsOfTestimony/BasicsOfTestimonyCard"
+import LearnTestimoniesCard from "./LearnTestimonies/LearnTestimoniesCard"
+import styles from "./LearnTestimonies/LearnTestimoniesCard.module.css"
+import LearnTestimoniesCardContent from "./LearnTestimonies/LearnTestimoniesCardContent"
+import RoleOfTestimonyCard from "./RoleOfTestimony/RoleOfTestimonyCard"
 
 const BasicsContent = [
   {

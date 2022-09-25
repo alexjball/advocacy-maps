@@ -1,5 +1,5 @@
+import { Col, Container, Row } from "react-bootstrap"
 import styled from "styled-components"
-import { Col, Container, Row } from "../bootstrap"
 import { TestimonyFormPanel } from "../publish"
 import { Back } from "./Back"
 import { BillNumber } from "./BillNumber"

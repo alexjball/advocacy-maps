@@ -1,5 +1,5 @@
 import { AuthProvider, GoogleAuthProvider } from "firebase/auth"
-import { Image, Stack } from "../bootstrap"
+import { Image, Stack } from "react-bootstrap"
 import { LoadingButton } from "../buttons"
 import { useSignInWithPopUp } from "./hooks"
 

@@ -1,6 +1,6 @@
-import { Row, Col } from "../bootstrap"
-import styles from "./AdditionalResourcesCard.module.css"
+import { Col, Row } from "react-bootstrap"
 import Container from "react-bootstrap/Container"
+import styles from "./AdditionalResourcesCard.module.css"
 
 const AdditionalResourcesCardContent = ({ children }) => {
   return (

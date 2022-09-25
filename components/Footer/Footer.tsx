@@ -1,7 +1,7 @@
 import { User } from "firebase/auth"
+import { Button, Col, Nav, Navbar, Row } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 import styled from "styled-components"
-import { Button, Col, Nav, Navbar, Row } from "../bootstrap"
 import { ExternalNavLink, NavLink } from "../Navlink"
 import CustomDropdown from "./CustomFooterDropdown"
 import styles from "./Footer.module.css"

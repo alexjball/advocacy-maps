@@ -1,6 +1,5 @@
-import { Carousel, CarouselItem } from "react-bootstrap"
+import { Carousel, Col, Container, Row } from "react-bootstrap"
 import { useMediaQuery } from "usehooks-ts"
-import { Col, Container, Row } from "../bootstrap"
 import { useRecentTestimony } from "../db"
 import TestimonyCallout from "./TestimonyCallout"
 

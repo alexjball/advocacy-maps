@@ -1,4 +1,4 @@
-import { Row, Col } from "../bootstrap"
+import { Col, Row } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 
 const NuLawLabCardContent = () => {

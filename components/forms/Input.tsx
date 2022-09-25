@@ -2,7 +2,7 @@ import { useId } from "@react-aria/utils"
 import clsx from "clsx"
 import { forwardRef } from "react"
 import type { FormControlProps } from "react-bootstrap"
-import { FloatingLabel, Form } from "../bootstrap"
+import { FloatingLabel, Form } from "react-bootstrap"
 
 export type InputProps = Omit<
   FormControlProps,

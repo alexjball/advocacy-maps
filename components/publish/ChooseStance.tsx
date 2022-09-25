@@ -1,6 +1,5 @@
-import { ToggleButton, ToggleButtonProps } from "react-bootstrap"
+import { Image, ToggleButton, ToggleButtonProps } from "react-bootstrap"
 import styled from "styled-components"
-import { Image } from "../bootstrap"
 import { Position } from "../db"
 import { useAppDispatch } from "../hooks"
 import { positionLabels } from "./content"

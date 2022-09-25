@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react"
+import { Image, Modal } from "react-bootstrap"
 import styled from "styled-components"
-import { Image, Modal } from "../../bootstrap"
 import { useAppDispatch } from "../../hooks"
 import { usePublishState } from "../hooks"
 import { setShowThankYou } from "../redux"

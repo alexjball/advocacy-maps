@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Nav } from "./bootstrap"
+import { Nav } from "react-bootstrap"
 import * as links from "./links"
 import { Wrap } from "./links"
 

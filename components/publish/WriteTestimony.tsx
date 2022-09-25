@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react"
+import { Tab, Tabs } from "react-bootstrap"
 import styled from "styled-components"
 import { useAuth } from "../auth"
-import { Tab, Tabs } from "../bootstrap"
 import { Attachment } from "../CommentModal/Attachment"
 import { useDraftTestimonyAttachment } from "../db"
 import { Maybe } from "../db/common"

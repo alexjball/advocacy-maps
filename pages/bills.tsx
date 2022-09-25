@@ -1,4 +1,4 @@
-import { Container } from "../components/bootstrap"
+import { Container } from "react-bootstrap"
 import { createPage } from "../components/page"
 import { BillSearch } from "../components/search"
 

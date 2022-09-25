@@ -1,6 +1,6 @@
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Button } from "../bootstrap"
+import { Button } from "react-bootstrap"
 import { Pagination } from "../db"
 
 export const PaginationButtons = ({

@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import type { ModalProps } from "react-bootstrap"
+import { Alert, Col, Form, Image, Modal, Stack } from "react-bootstrap"
 import { useForm } from "react-hook-form"
-import { Alert, Col, Form, Image, Modal, Stack } from "../bootstrap"
 import { LoadingButton } from "../buttons"
 import Input from "../forms/Input"
 import { SendPasswordResetEmailData, useSendPasswordResetEmail } from "./hooks"

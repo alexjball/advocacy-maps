@@ -1,4 +1,4 @@
-import { Card } from "../bootstrap"
+import { Card } from "react-bootstrap"
 import styles from "./AboutPagesCard.module.css"
 
 const AboutPagesCard = ({ title, children }) => {

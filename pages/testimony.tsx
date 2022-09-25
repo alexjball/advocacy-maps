@@ -1,8 +1,7 @@
 import { Internal } from "components/links"
 import { useRouter } from "next/router"
-import { Spinner } from "react-bootstrap"
+import { Container, Spinner } from "react-bootstrap"
 import styled from "styled-components"
-import { Container } from "../components/bootstrap"
 import {
   useBill,
   usePublicProfile,

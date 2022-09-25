@@ -2,10 +2,10 @@ import { formUrl } from "components/publish/hooks"
 import { NoResults } from "components/search/NoResults"
 import { ViewAttachment } from "components/ViewAttachment"
 import { useState } from "react"
+import { Button, Col, Form, Row } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 import styled from "styled-components"
 import { useMediaQuery } from "usehooks-ts"
-import { Button, Col, Form, Row } from "../bootstrap"
 import {
   Testimony,
   useBill,

@@ -4,7 +4,7 @@ import { useId } from "@react-aria/utils"
 import clsx from "clsx"
 import { forwardRef, useState } from "react"
 import type { FormControlProps } from "react-bootstrap"
-import { Form, FloatingLabel } from "../bootstrap"
+import { FloatingLabel, Form } from "react-bootstrap"
 import styles from "./PasswordInput.module.css"
 
 type PasswordInputProps = Omit<

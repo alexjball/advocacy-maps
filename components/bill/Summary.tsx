@@ -1,7 +1,7 @@
 import * as links from "components/links"
 import { useState } from "react"
+import { Button, Col, Container, Modal, Row } from "react-bootstrap"
 import styled from "styled-components"
-import { Button, Col, Container, Modal, Row } from "../bootstrap"
 import { TestimonyCounts } from "./TestimonyCounts"
 import { BillProps } from "./types"
 

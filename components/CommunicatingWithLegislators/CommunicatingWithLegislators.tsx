@@ -1,10 +1,10 @@
-import { Container, Row, Col, Card } from "../bootstrap"
-import {
-  WritingContent,
-  OralContent,
-  WriteOrCallContent
-} from "./CommunicatingWithLegislatorsContent"
+import { Card, Col, Container, Row } from "react-bootstrap"
 import styles from "./CommunicatingWithLegislators.module.css"
+import {
+  OralContent,
+  WriteOrCallContent,
+  WritingContent
+} from "./CommunicatingWithLegislatorsContent"
 
 const CommunicatingWithLegislators = () => {
   const CommWithLegCard = ({

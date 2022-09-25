@@ -1,7 +1,6 @@
 import clsx from "clsx"
 import { ReactNode } from "react"
-import { ButtonProps } from "react-bootstrap"
-import { Button } from "../bootstrap"
+import { Button, ButtonProps } from "react-bootstrap"
 import { useAppDispatch } from "../hooks"
 import { usePublishState } from "./hooks"
 import { nextStep, previousStep } from "./redux"

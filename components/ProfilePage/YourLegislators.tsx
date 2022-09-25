@@ -1,4 +1,4 @@
-import { Col, Row } from "../bootstrap"
+import { Col, Row } from "react-bootstrap"
 import { External } from "../links"
 import { StyledBody } from "../shared/TitledSectionCard"
 import { SelectLegislators } from "./SelectLegislators"

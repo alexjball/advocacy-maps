@@ -1,7 +1,7 @@
-import { Row, Col } from "../bootstrap"
+import { Col, Row } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
-import styles from "./GoalsAndMissionCardContent.module.css"
 import { SignInWithModal } from "../auth"
+import styles from "./GoalsAndMissionCardContent.module.css"
 
 const OurGoalsCardContent = () => (
   <>

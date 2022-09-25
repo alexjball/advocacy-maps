@@ -1,4 +1,4 @@
-import { Alert, Row, Spinner } from "../bootstrap"
+import { Alert, Row, Spinner } from "react-bootstrap"
 import { useBill } from "../db"
 import { Layout } from "./Layout"
 

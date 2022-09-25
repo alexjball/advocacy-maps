@@ -7,8 +7,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Hit } from "instantsearch.js"
 import Link from "next/link"
+import { Card, Col } from "react-bootstrap"
 import styled from "styled-components"
-import { Card, Col } from "../bootstrap"
 import { formatBillId } from "../formatting"
 
 type BillRecord = {

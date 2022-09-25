@@ -1,5 +1,5 @@
+import { Image } from "react-bootstrap"
 import styled from "styled-components"
-import { Image } from "../bootstrap"
 
 const Container = styled.div`
   background-color: white;

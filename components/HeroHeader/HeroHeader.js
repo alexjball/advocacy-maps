@@ -1,5 +1,5 @@
+import { Button, Col, Container, Image, Row } from "react-bootstrap"
 import { SignInWithModal } from "../auth"
-import { Button, Col, Container, Image, Row } from "../bootstrap"
 import { Wrap } from "../links"
 import ScrollTrackerContainer from "../ScrollTrackEffect/ScrollTrackerContainer"
 import ScrollTrackingItem from "../ScrollTrackEffect/ScrollTrackerItem"

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react"
+import { Card, Col, Row } from "react-bootstrap"
 import styled from "styled-components"
 import { useMediaQuery } from "usehooks-ts"
-import { Card, Col, Row } from "../bootstrap"
 
 const StyledCard = styled(Card)`
   flex-grow: 1;

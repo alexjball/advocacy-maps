@@ -1,4 +1,4 @@
-import { Form } from "../bootstrap"
+import { Form } from "react-bootstrap"
 import {
   MemberSearchIndex,
   ProfileHook,

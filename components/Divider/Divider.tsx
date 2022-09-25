@@ -1,7 +1,6 @@
 import clsx from "clsx"
-import React from "react"
 import type { RowProps } from "react-bootstrap"
-import { Col, Row } from "../bootstrap"
+import { Col, Row } from "react-bootstrap"
 import styles from "./Divider.module.css"
 
 export default function Divider({

@@ -1,7 +1,7 @@
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ChangeEventHandler, useCallback, useEffect, useState } from "react"
-import { Button, Col, Form, InputGroup, Row, Spinner } from "../bootstrap"
+import { Button, Col, Form, InputGroup, Row, Spinner } from "react-bootstrap"
 import { AttachmentInfo, UseDraftTestimonyAttachment } from "../db"
 import { External } from "../links"
 

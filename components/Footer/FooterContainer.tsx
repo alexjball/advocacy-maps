@@ -1,5 +1,5 @@
+import { Container } from "react-bootstrap"
 import styled from "styled-components"
-import { Container } from "../bootstrap"
 
 export const FooterContainer = styled(Container)`
   .navbar {

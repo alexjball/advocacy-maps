@@ -1,9 +1,9 @@
 import AwesomeDebouncePromise from "awesome-debounce-promise"
 import Fuse from "fuse.js"
 import { useMemo } from "react"
+import { Row, Spinner } from "react-bootstrap"
 import { GroupBase } from "react-select"
 import AsyncSelect, { AsyncProps } from "react-select/async"
-import { Row, Spinner } from "./bootstrap"
 import { MemberSearchIndexItem, ProfileMember } from "./db"
 
 export const Loading = () => (

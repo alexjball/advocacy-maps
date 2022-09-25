@@ -1,10 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
+import { ComponentMeta, ComponentStory } from "@storybook/react"
 import { useState } from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
 
 import { LoadingButton } from "../../../components/buttons"
 
-import { Image } from "../../../components/bootstrap"
+import { Image } from "react-bootstrap"
 
 export default {
   title: "Components/Buttons/LoadingButton",

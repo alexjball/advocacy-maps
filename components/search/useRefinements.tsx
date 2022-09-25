@@ -5,9 +5,9 @@ import {
 import { faFilter } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useCallback, useEffect, useState } from "react"
+import { Button, Col, Offcanvas } from "react-bootstrap"
 import styled from "styled-components"
 import { useMediaQuery } from "usehooks-ts"
-import { Button, Col, Offcanvas } from "../bootstrap"
 import { SearchContainer } from "./SearchContainer"
 
 export const FilterButton = styled(Button)`

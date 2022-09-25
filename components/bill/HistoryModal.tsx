@@ -1,6 +1,6 @@
 import { useState } from "react"
+import { Button, Modal } from "react-bootstrap"
 import styled from "styled-components"
-import { Button, Modal } from "../bootstrap"
 import { HistoryTable } from "./HistoryTable"
 import { BillProps } from "./types"
 

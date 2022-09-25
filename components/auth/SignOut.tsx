@@ -1,5 +1,5 @@
 import type { ButtonProps } from "react-bootstrap"
-import { Button } from "../bootstrap"
+import { Button } from "react-bootstrap"
 import { auth } from "../firebase"
 
 /** Signs out the current user. Pages that are wrapped in `requireAuth` will

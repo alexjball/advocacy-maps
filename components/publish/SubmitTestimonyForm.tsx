@@ -1,6 +1,6 @@
 import clsx from "clsx"
+import { Col, Container, Image, Row, Spinner } from "react-bootstrap"
 import styled from "styled-components"
-import { Col, Container, Image, Row, Spinner } from "../bootstrap"
 import { Bill, Profile } from "../db"
 import * as links from "../links"
 import { ChooseStance } from "./ChooseStance"

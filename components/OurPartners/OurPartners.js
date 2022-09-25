@@ -1,10 +1,10 @@
-import { Container, Row, Col } from "../bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import AboutPagesCard from "../AboutPagesCard/AboutPagesCard"
 import {
-  NuLawLabCardContent,
-  CodeForBostonCardContent,
   BostonCollegeCardContent,
-  HbkCenterCardContent
+  CodeForBostonCardContent,
+  HbkCenterCardContent,
+  NuLawLabCardContent
 } from "../OurPartnersCardContent/OurPartnersCardContent"
 
 const OurPartners = () => {

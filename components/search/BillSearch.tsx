@@ -6,9 +6,9 @@ import {
   SearchBox,
   useInstantSearch
 } from "@alexjball/react-instantsearch-hooks-web"
+import { Col, Row } from "react-bootstrap"
 import styled from "styled-components"
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter"
-import { Col, Row } from "../bootstrap"
 import { BillHit } from "./BillHit"
 import { getServerConfig } from "./common"
 import { NoResults } from "./NoResults"

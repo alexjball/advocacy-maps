@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button } from "../bootstrap"
+import { Button } from "react-bootstrap"
 import ForgotPasswordModal from "./ForgotPasswordModal"
 import SignInModal from "./SignInModal"
 import SignUpModal from "./SignUpModal"

@@ -1,7 +1,6 @@
-import { Row, Col } from "../bootstrap"
+import { Col, Row } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 import styles from "./CommunicatingWithLegislators.module.css"
-import { SignInWithModal } from "../auth"
 
 const WritingContent = () => (
   <Row className="align-items-center">

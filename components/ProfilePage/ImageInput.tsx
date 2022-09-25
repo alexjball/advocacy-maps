@@ -1,6 +1,6 @@
-import { ChangeEvent, useCallback, useEffect, useState } from "react"
+import { ChangeEvent, useCallback } from "react"
+import { Image, Spinner } from "react-bootstrap"
 import { useAuth } from "../auth"
-import { Image, Spinner } from "../bootstrap"
 import { useProfile } from "../db"
 
 export type ImageInputProps = {

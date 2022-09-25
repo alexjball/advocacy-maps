@@ -1,7 +1,6 @@
-import { TabContent } from "react-bootstrap"
+import { Col, Nav, NavDropdown, Row, TabContent } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 import styled from "styled-components"
-import { Col, Nav, NavDropdown, Row } from "../bootstrap"
 
 export const StyledTabNav = styled(Nav).attrs(props => ({
   className: props.className

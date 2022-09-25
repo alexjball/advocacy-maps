@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import type { ModalProps } from "react-bootstrap"
+import { Alert, Button, Col, Form, Modal, Stack } from "react-bootstrap"
 import { useForm } from "react-hook-form"
-import { Alert, Button, Col, Form, Modal, Stack } from "../bootstrap"
 import { LoadingButton } from "../buttons"
 import Divider from "../Divider/Divider"
 import Input from "../forms/Input"

@@ -1,5 +1,5 @@
 import type { ButtonProps } from "react-bootstrap"
-import { Button } from "../bootstrap"
+import { Button } from "react-bootstrap"
 import { useTestimonyEmail } from "./hooks"
 
 export const SendEmailButton = (props: ButtonProps) => {

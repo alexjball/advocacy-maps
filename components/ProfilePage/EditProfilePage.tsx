@@ -1,8 +1,15 @@
 import { useCallback, useState } from "react"
-import { TabPane } from "react-bootstrap"
+import {
+  Button,
+  Col,
+  Container,
+  Nav,
+  Row,
+  Spinner,
+  TabPane
+} from "react-bootstrap"
 import TabContainer from "react-bootstrap/TabContainer"
 import { useAuth } from "../auth"
-import { Button, Col, Container, Nav, Row, Spinner } from "../bootstrap"
 import {
   Profile,
   ProfileHook,

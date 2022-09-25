@@ -1,8 +1,17 @@
 import React, { useRef, useState } from "react"
-import { ButtonProps, ImageProps, SpinnerProps, Tooltip } from "react-bootstrap"
+import {
+  Button,
+  ButtonProps,
+  Image,
+  ImageProps,
+  Overlay,
+  OverlayTrigger,
+  Spinner,
+  SpinnerProps,
+  Tooltip
+} from "react-bootstrap"
 import CopyToClipboard from "react-copy-to-clipboard"
 import styled from "styled-components"
-import { Button, Image, Overlay, OverlayTrigger, Spinner } from "./bootstrap"
 import { Internal } from "./links"
 
 export const TableButton = ({

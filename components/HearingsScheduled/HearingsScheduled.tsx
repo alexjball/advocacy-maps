@@ -1,6 +1,5 @@
 import { useState } from "react"
-import { Carousel, Container, Spinner } from "react-bootstrap"
-import { Col, Image, Row } from "../bootstrap"
+import { Carousel, Col, Container, Image, Row, Spinner } from "react-bootstrap"
 import { useCalendarEvents } from "./calendarEvents"
 import styles from "./HearingsScheduled.module.css"
 

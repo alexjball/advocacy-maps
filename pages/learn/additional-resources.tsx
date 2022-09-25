@@ -1,8 +1,8 @@
-import { Container } from "../../components/bootstrap"
-import { createPage } from "../../components/page"
+import { Container } from "react-bootstrap"
 import AdditionalResourcesCard from "../../components/AdditionalResources/AdditionalResourcesCard"
-import AdditionalResourcesCardContent from "../../components/AdditionalResources/AdditionalResourcesCardContent"
 import styles from "../../components/AdditionalResources/AdditionalResourcesCard.module.css"
+import AdditionalResourcesCardContent from "../../components/AdditionalResources/AdditionalResourcesCardContent"
+import { createPage } from "../../components/page"
 
 const content = [
   {

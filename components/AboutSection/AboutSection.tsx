@@ -1,5 +1,5 @@
+import { Col, Container, Row } from "react-bootstrap"
 import AboutInfoCard from "../AboutSectionInfoCard/AboutInfoCard"
-import { Col, Container, Row } from "../bootstrap"
 import BackgroundLogo from "../LogoPlacements/BackgroundLogo"
 import ScrollTrackerContainer from "../ScrollTrackEffect/ScrollTrackerContainer"
 import ScrollTrackingItem from "../ScrollTrackEffect/ScrollTrackerItem"

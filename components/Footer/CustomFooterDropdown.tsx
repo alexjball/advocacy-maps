@@ -1,5 +1,4 @@
-import React from "react"
-import { NavDropdown, Button } from "../bootstrap"
+import { NavDropdown } from "react-bootstrap"
 
 export type CustomDropdownProps = {
   title: string

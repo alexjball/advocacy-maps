@@ -1,6 +1,6 @@
 import { SSRProvider as AriaSSRProvider } from "@react-aria/ssr"
+import { SSRProvider as BootstrapSSRProvider } from "react-bootstrap"
 import { Provider as Auth } from "../components/auth"
-import { SSRProvider as BootstrapSSRProvider } from "../components/bootstrap"
 import { Provider as Profile } from "./db/profile/service"
 import { Provider as Firebase } from "./firebase"
 import { LogRocketProvider as LogRocket } from "./logRocket"

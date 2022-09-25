@@ -1,5 +1,5 @@
 import type { ModalProps } from "react-bootstrap"
-import { Button, Col, Image, Modal, Stack } from "../bootstrap"
+import { Button, Col, Image, Modal, Stack } from "react-bootstrap"
 import styles from "./StartModal.module.css"
 
 export default function StartModal({
