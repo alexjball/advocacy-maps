@@ -8,6 +8,7 @@ let config = {
   compiler: {
     styledComponents: true
   },
+  reactStrictMode: true,
   experimental: {
     modularizeImports: {
       "react-bootstrap": {
