@@ -1,18 +1,29 @@
 /**
  * @type {import('next').NextConfig}
  */
-const config = {
+let config = {
   images: {
     loader: "custom"
   },
   compiler: {
     styledComponents: true
   },
-  eslint: {
-    dirs: ["pages", "components", "functions/src", "tests", "analysis"]
+  experimental: {
+    modularizeImports: {
+      "react-bootstrap": {
+        transform: "react-bootstrap/{{member}}",
+        preventFullImport: true
+      },
+      lodash: {
+        transform: "lodash/{{member}}",
+        preventFullImport: true
+      }
+    }
   }
 }
 
-module.exports = {
-  ...config
+if (process.env.BUNDLE_ANALYZER === "true") {
+  config = require("@next/bundle-analyzer")({ enabled: true })(config)
 }
+
+module.exports = config

@@ -13,6 +13,7 @@
     "dev:backend": "yarn compose up",
     "dev:backend:update": "yarn compose down -v && yarn compose up --build",
     "dev:backfill": "sh ./scripts/backfill-dev.sh",
+    "analyze-bundle": "BUNDLE_ANALYZER=true next build && echo open .next/analyze/client.html",
     "typesense-admin": "ts-node -P tsconfig.script.json scripts/typesense-admin.ts",
     "firebase-admin": "ts-node -P tsconfig.script.json scripts/firebase-admin",
     "compose": "docker compose -f infra/docker-compose.yml",
@@ -72,6 +73,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
+    "@next/bundle-analyzer": "^12.3.1",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.10",
