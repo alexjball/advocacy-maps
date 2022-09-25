@@ -1,10 +1,8 @@
-import React, { useState } from "react"
-import { Container, Carousel, Spinner } from "react-bootstrap"
+import { useState } from "react"
+import { Carousel, Container, Spinner } from "react-bootstrap"
 import { Col, Image, Row } from "../bootstrap"
-import styles from "./HearingsScheduled.module.css"
-import { useUpcomingEvents } from "../db/events"
-import { formatDate, numberToFullMonth } from "./dateUtils"
 import { useCalendarEvents } from "./calendarEvents"
+import styles from "./HearingsScheduled.module.css"
 
 export type EventData = {
   index: number
@@ -111,7 +109,7 @@ export const HearingsScheduled = () => {
         <Col xs={{ order: 1 }} md={{ span: 5, order: 0 }}>
           <Image
             className={`ml-5 ${styles.podium}`}
-            src="speaker-podium.png"
+            src="/speaker-podium.png"
             alt="speaker at podium"
           />
         </Col>

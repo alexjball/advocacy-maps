@@ -201,14 +201,14 @@ export const Socials = ({
     <Col className={`d-flex flex-grow-1 justify-content-between`}>
       {twitter && (
         <External plain href={`https://www.twitter.com/${twitter}`}>
-          <Image alt="twitter" src="twitter.svg" />
+          <Image alt="twitter" src="/twitter.svg" />
         </External>
       )}
     </Col>
     <Col>
       {linkedIn && (
         <External plain href={`https://www.linkedin.com/in/${linkedIn}`}>
-          <Image alt="linkedIn" src="linkedin.svg" />
+          <Image alt="linkedIn" src="/linkedin.svg" />
         </External>
       )}
     </Col>
