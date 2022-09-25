@@ -278,6 +278,7 @@ const ShareButtons = () => {
   if (sent) {
     buttons.push(
       <Button
+        key="back-to-bill"
         variant="outline-secondary"
         className="form-navigation-btn"
         onClick={redirectToBill}
