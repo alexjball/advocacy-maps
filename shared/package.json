@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "yarn build:tsc"
+    "build": "yarn ts:clean && yarn ts:build"
   },
   "dependencies": {
     "runtypes": "6.6.0"

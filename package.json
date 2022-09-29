@@ -12,7 +12,6 @@
     "build": "next build",
     "build-storybook": "build-storybook -s public",
     "build:functions": "next lint -d functions/src && yarn --cwd functions build",
-    "build:tsc": "cd $INIT_CWD && tsc --build",
     "check-formatting": "prettier --check .",
     "check-types": "tsc --noEmit",
     "compose": "docker compose -f infra/docker-compose.yml",
@@ -36,6 +35,8 @@
     "test:integration": "jest -c tests/jest.integration.config.ts -w 1",
     "test:integration-ci": "node scripts/test-integration-ci.js",
     "test:system": "jest -c tests/jest.system.config.ts",
+    "ts:build": "cd $INIT_CWD && rimraf dist/ && tsc",
+    "ts:clean": "cd $INIT_CWD && rimraf dist/",
     "typesense-admin": "ts-node -P tsconfig.script.json scripts/typesense-admin.ts"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.17",
+    "@maple-testimony/shared": "workspace:*",
     "@react-aria/ssr": "^3.2.0",
     "@react-aria/utils": "^3.13.1",
     "@reduxjs/toolkit": "^1.8.3",

@@ -2,12 +2,12 @@
   "name": "@maple-testimony/functions",
   "version": "0.1.0",
   "private": true,
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "yarn clean && tsc && yarn copy-files",
-    "build:watch": "yarn clean && yarn copy-files && tsc --watch --preserveWatchOutput",
-    "clean": "rimraf lib",
-    "copy-files": "copyfiles -u 1 src/ssl/* lib/",
+    "build": "yarn clean && yarn copy-files && yarn ts:build",
+    "build:watch": "yarn copy-files && tsc --build --watch --preserveWatchOutput",
+    "clean": "yarn ts:clean",
+    "copy-files": "copyfiles -u 1 src/ssl/* dist/",
     "enable-cors-dev": "gsutil cors set cors.json gs://digital-testimony-dev.appspot.com",
     "enable-cors-prod": "gsutil cors set cors.json gs://digital-testimony-prod.appspot.com",
     "logs": "firebase functions:log",
@@ -16,6 +16,7 @@
   "dependencies": {
     "@google-cloud/firestore": "^5.0.2",
     "@google-cloud/pubsub": "^3.0.1",
+    "@maple-testimony/shared": "workspace:*",
     "axios": "^0.25.0",
     "firebase-admin": "^10",
     "firebase-functions": "^3.22.0",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.186",
     "@types/luxon": "^2.0.9",
     "@types/object-hash": "^2.2.1",
     "copyfiles": "^2.4.1",

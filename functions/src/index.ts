@@ -28,3 +28,7 @@ export {
   upgradeTestimonySearchIndex
 } from "./testimony"
 export * from "./triggerPubsubFunction"
+
+import { MyType } from "@maple-testimony/shared"
+
+console.log(MyType)
