@@ -1,9 +1,10 @@
 {
-  "name": "digital-testimony-platform",
+  "name": "@maple-testimony/frontend",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "functions"
+    "functions",
+    "analysis/downloader"
   ],
   "scripts": {
     "analyze-bundle": "BUNDLE_ANALYZER=true next build && echo open .next/analyze/client.html",
@@ -19,7 +20,6 @@
     "dev:backend": "yarn compose up",
     "dev:backend:update": "yarn compose down -v && yarn compose up --build",
     "dev:backfill": "sh ./scripts/backfill-dev.sh",
-    "dev:functions": "yarn --cwd functions dev",
     "export": "next build && next export",
     "export-test-data": "firebase --project demo-dtp emulators:export --only firestore,storage tests/integration/exportedTestData",
     "export:nolint": "next build --no-lint && next export",
@@ -30,7 +30,7 @@
     "seed": "jest -c tests/jest.seed.config.ts",
     "serve": "firebase emulators:start --only hosting",
     "start": "next start",
-    "storybook": "start-storybook -p 6006 -s ./public",
+    "storybook": "start-storybook -p 6006",
     "test:integration": "jest -c tests/jest.integration.config.ts -w 1",
     "test:integration-ci": "node scripts/test-integration-ci.js",
     "test:system": "jest -c tests/jest.system.config.ts",
@@ -116,5 +116,6 @@
     "ts-node": "^10.5.0",
     "typescript": "4.5.5",
     "yargs": "^17.5.1"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }

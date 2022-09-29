@@ -1,3 +1,6 @@
+/**
+ * @type {import('@storybook/react/types').StorybookConfig}
+ */
 module.exports = {
   stories: [
     "../stories/**/*.stories.mdx",
@@ -12,5 +15,6 @@ module.exports = {
   framework: "@storybook/react",
   core: {
     builder: "@storybook/builder-webpack5"
-  }
+  },
+  staticDirs: ["../public"]
 }
