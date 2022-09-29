@@ -8,7 +8,6 @@
     "build:watch": "yarn clean && yarn copy-files && tsc --watch --preserveWatchOutput",
     "clean": "rimraf lib",
     "copy-files": "copyfiles -u 1 src/ssl/* lib/",
-    "dev": "node dev-functions.js",
     "enable-cors-dev": "gsutil cors set cors.json gs://digital-testimony-dev.appspot.com",
     "enable-cors-prod": "gsutil cors set cors.json gs://digital-testimony-prod.appspot.com",
     "logs": "firebase functions:log",
