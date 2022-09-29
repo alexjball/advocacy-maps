@@ -1,0 +1,12 @@
+{
+  "name": "@maple-testimony/shared",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "yarn build:tsc"
+  },
+  "dependencies": {
+    "runtypes": "6.6.0"
+  }
+}

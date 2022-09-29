@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "functions",
-    "analysis/downloader"
+    "analysis/downloader",
+    "shared",
+    "functions"
   ],
   "scripts": {
     "analyze-bundle": "BUNDLE_ANALYZER=true next build && echo open .next/analyze/client.html",
     "build": "next build",
     "build-storybook": "build-storybook -s public",
     "build:functions": "next lint -d functions/src && yarn --cwd functions build",
+    "build:tsc": "cd $INIT_CWD && tsc --build",
     "check-formatting": "prettier --check .",
     "check-types": "tsc --noEmit",
     "compose": "docker compose -f infra/docker-compose.yml",
