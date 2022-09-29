@@ -18,7 +18,7 @@ const envs: Record<string, { url: string; key?: string; alias?: string }> = {
 type Args = { url?: string; key?: string; env?: string }
 yargs(hideBin(process.argv))
   .scriptName("typesense-admin")
-  .command(
+  .command<Args>(
     "console",
     "start a node repl with an initialized client",
     () => {},
@@ -50,7 +50,7 @@ yargs(hideBin(process.argv))
       console.log(await client.keys().retrieve())
     }
   )
-  .command(
+  .command<Args & { id: string }>(
     "delete-key <id>",
     "list keys",
     () => {},
