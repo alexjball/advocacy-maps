@@ -5,6 +5,7 @@ import { Provider as ReduxProvider } from "react-redux"
 import { reducer as auth } from "./auth/redux"
 import { reducer as profile } from "./db/profile/redux"
 import { reducer as publish } from "./publish/redux"
+import { ContainerFC } from "./types"
 import { rejectionLogger } from "./utils"
 
 export const createStore = () =>
@@ -26,7 +27,7 @@ export const createStore = () =>
     }
   })
 
-export const Provider: React.FC<{}> = ({ children }) => {
+export const Provider: ContainerFC = ({ children }) => {
   const storeRef = useRef<AppStore>()
   if (!storeRef.current) storeRef.current = createStore()
   return <ReduxProvider store={storeRef.current}>{children}</ReduxProvider>

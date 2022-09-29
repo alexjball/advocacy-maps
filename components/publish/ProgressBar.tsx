@@ -1,3 +1,4 @@
+import { ContainerFC } from "components/types"
 import styled from "styled-components"
 import { isComplete, Step } from "./redux"
 import { chipHeight, StepChip } from "./StepChip"
@@ -32,7 +33,7 @@ export const ProgressBar = styled<{ currentStep: Step }>(
   font-size: 0.75rem;
 `
 
-const StepBox: React.FC<{ step: number; active?: boolean }> = ({
+const StepBox: ContainerFC<{ step: number; active?: boolean }> = ({
   step,
   active,
   children

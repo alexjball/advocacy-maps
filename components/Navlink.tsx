@@ -2,11 +2,11 @@ import { useRouter } from "next/router"
 import { Nav } from "react-bootstrap"
 import * as links from "./links"
 import { Wrap } from "./links"
+import { StyledFC } from "./types"
 
-export const NavLink: React.FC<{
+export const NavLink: StyledFC<{
   href?: string
   handleClick?: any
-  className?: string
   other?: any
 }> = ({ href, handleClick, className, children, other }) => {
   const router = useRouter()
@@ -24,9 +24,8 @@ export const NavLink: React.FC<{
   )
 }
 
-export const ExternalNavLink: React.FC<{
+export const ExternalNavLink: StyledFC<{
   href: string
-  className?: string
 }> = ({ href, children, className }) => {
   return (
     <links.External className={`${className} nav-link`} href={href}>

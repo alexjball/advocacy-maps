@@ -7,6 +7,7 @@ import { Testimony } from "../functions/src/testimony/types"
 import { BillContent, MemberContent } from "./db"
 import { currentGeneralCourt } from "./db/common"
 import { formatBillId } from "./formatting"
+import { ContainerFC } from "./types"
 
 type LinkProps = PropsWithChildren<{ href: string; className?: string }>
 
@@ -37,7 +38,7 @@ export function External({
   )
 }
 
-export const Wrap: React.FC<{ href: string }> = ({ href, children }) => (
+export const Wrap: ContainerFC<{ href: string }> = ({ href, children }) => (
   <Link href={href} passHref>
     {children}
   </Link>

@@ -1,3 +1,4 @@
+import { ContainerFC } from "components/types"
 import { Image } from "react-bootstrap"
 import styled from "styled-components"
 
@@ -15,7 +16,7 @@ const Container = styled.div`
   }
 `
 
-export const NoResults: React.FC = ({ children }) => {
+export const NoResults: ContainerFC = ({ children }) => {
   return (
     <Container>
       <Image src="/no-results.png" alt="No results" />

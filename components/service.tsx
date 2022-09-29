@@ -1,11 +1,12 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react"
+import { ContainerFC } from "./types"
 
 type Maybe<T> = T | undefined
 type Setter<T> = (s: T) => void
 
 /** Creates a service context and access hooks. */
 export function createService<Service>(providerHook?: () => Service): {
-  Provider: React.FC
+  Provider: ContainerFC
   useService: () => Maybe<Service>
   useServiceChecked: () => Service
   useBinding: (impl: Service) => void
@@ -58,10 +59,10 @@ export function createService<Service>(providerHook?: () => Service): {
   }
 }
 
-type BaseProvider = React.FC
+type BaseProvider = ContainerFC
 
 /** Render a list of service providers */
-export const ServiceProvider: React.FC<{
+export const ServiceProvider: ContainerFC<{
   providers: BaseProvider[]
 }> = ({ providers, children }) => (
   <>

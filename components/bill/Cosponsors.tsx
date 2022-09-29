@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { Button, Modal, Table } from "react-bootstrap"
 import styled from "styled-components"
-import { Bill, BillContent, MemberReference, useMember } from "../db"
+import { MemberReference, useMember } from "../db"
 import { memberLink } from "../links"
-import { FC } from "../types"
+import { ContainerFC } from "../types"
 import { BillProps } from "./types"
 
 const CoSponsorRow = ({ coSponsor }: { coSponsor: MemberReference }) => {
@@ -50,7 +50,7 @@ const StyledButton = styled(Button)`
   margin: 0;
 `
 
-export const Cosponsors: FC<BillProps> = ({ bill, children }) => {
+export const Cosponsors: ContainerFC<BillProps> = ({ bill, children }) => {
   const billNumber = bill.id
   const coSponsors = bill.content.Cosponsors
   const numCoSponsors = coSponsors ? coSponsors.length : 0

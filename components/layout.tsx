@@ -10,12 +10,13 @@ import PageFooter from "./Footer/Footer"
 import styles from "./layout.module.css"
 import { NavLink } from "./Navlink"
 import ProfileLink from "./ProfileLink/ProfileLink"
+import { ContainerFC } from "./types"
 
 export type LayoutProps = {
   title?: string
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
+export const Layout: ContainerFC<LayoutProps> = ({ children, title }) => {
   const { authenticated, user } = useAuth()
 
   return (

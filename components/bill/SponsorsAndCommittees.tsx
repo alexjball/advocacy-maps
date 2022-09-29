@@ -1,11 +1,14 @@
 import { External } from "../links"
 import { LabeledIcon } from "../shared"
-import { FC } from "../types"
+import { FC, StyledFC } from "../types"
 import { Cosponsors } from "./Cosponsors"
 import { LabeledContainer } from "./LabeledContainer"
 import { BillProps } from "./types"
 
-export const SponsorsAndCommittees: FC<BillProps> = ({ bill, className }) => {
+export const SponsorsAndCommittees: StyledFC<BillProps> = ({
+  bill,
+  className
+}) => {
   return (
     <LabeledContainer className={className}>
       <Sponsors bill={bill} />
@@ -37,7 +40,7 @@ const Committees: FC<BillProps> = ({ bill }) => {
   )
 }
 
-const Sponsors: FC<BillProps> = ({ bill, className }) => {
+const Sponsors: StyledFC<BillProps> = ({ bill, className }) => {
   const primary = bill.content.PrimarySponsor
   const cosponsors = bill.content.Cosponsors.filter(s => s.Id !== primary.Id)
   const more = cosponsors.length > 2

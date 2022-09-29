@@ -1,7 +1,8 @@
+import { ChildrenProps } from "components/types"
 import React from "react"
 import { Alert } from "react-bootstrap"
 
-export class SearchErrorBoundary extends React.Component {
+export class SearchErrorBoundary extends React.Component<ChildrenProps> {
   state: { error: string | null } = { error: null }
 
   promiseRejectionHandler = (event: PromiseRejectionEvent) => {
