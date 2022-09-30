@@ -1,9 +1,13 @@
 const { demoProjectId, env, runOrExit } = require("./common")
 
-runOrExit("yarn", ["--cwd", "functions", "build"], { stdio: "inherit" })
+runOrExit("yarn", ["workspace", "@maple-testimony/functions", "build-all"], {
+  stdio: "inherit"
+})
+
 runOrExit(
-  "firebase",
+  "yarn",
   [
+    "g:firebase",
     "--project",
     demoProjectId,
     "emulators:exec",
@@ -11,7 +15,7 @@ runOrExit(
     "auth,functions,pubsub,firestore,storage",
     "--import",
     "tests/integration/exportedTestData",
-    "yarn test:integration --forceExit"
+    "yarn test:integration --forceExit tests/integration/search.test.ts"
   ],
   { stdio: "inherit", env }
 )

@@ -1,0 +1,8 @@
+{
+  "name": "functions-deploy",
+  "main": "@maple-testimony/functions/dist/index.js",
+  "dependencies": {
+    "@maple-testimony/functions": "latest"
+  },
+  "packageManager": "yarn@3.2.3"
+}

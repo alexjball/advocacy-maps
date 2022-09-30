@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "yarn clean && yarn copy-files && yarn ts:build",
+    "build": "yarn g:clean-build && yarn copy-files",
+    "build-all": "tsc --build && yarn copy-files",
     "build:watch": "yarn copy-files && tsc --build --watch --preserveWatchOutput",
-    "clean": "yarn ts:clean",
     "copy-files": "copyfiles -u 1 src/ssl/* dist/",
     "enable-cors-dev": "gsutil cors set cors.json gs://digital-testimony-dev.appspot.com",
     "enable-cors-prod": "gsutil cors set cors.json gs://digital-testimony-prod.appspot.com",
-    "logs": "firebase functions:log",
+    "prepublishOnly": "yarn build",
     "test": "jest"
   },
   "dependencies": {
@@ -36,11 +39,8 @@
     "@types/object-hash": "^2.2.1",
     "copyfiles": "^2.4.1",
     "firebase-functions-test": "^0.3.3",
-    "firebase-tools": "^11.7.0",
     "jest": "^27.5.1",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.3",
-    "typescript": "4.5.5"
+    "ts-jest": "^27.1.3"
   },
   "engines": {
     "node": "16"

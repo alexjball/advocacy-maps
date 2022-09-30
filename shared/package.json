@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/src/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "yarn ts:clean && yarn ts:build"
+    "build": "yarn g:clean-build"
   },
   "dependencies": {
     "runtypes": "6.6.0"
