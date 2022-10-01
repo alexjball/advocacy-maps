@@ -23,24 +23,17 @@ services:
       context: ..
       dockerfile: infra/Dockerfile
       target: firebase
-    command: >
-      yarn firebase
-      --project demo-dtp emulators:start
-      --only auth,functions,pubsub,firestore,storage
-      --import tests/integration/exportedTestData
+    command: sh -c 'yarn --immutable && yarn emulators:start'
     working_dir: /app
     volumes:
       - ..:/app
+      - unplugged:/app/.yarn/unplugged/
 
       # Override env for running in compose
       - ./.env.functions-compose:/app/functions/.env.demo-dtp
 
       # Override firebase.json to bind to all container interfaces
       - ./firebase.compose.json:/app/firebase.json
-
-      # Prevent host node_modules from overriding the image modules.
-      - /app/node_modules/
-      - /app/functions/node_modules/
     ports:
       - 9099:9099
       - 5001:5001
@@ -51,26 +44,25 @@ services:
 
   builder:
     image: node:16-alpine
-    command: yarn --cwd functions build:watch
+    command: sh -c 'yarn --immutable && yarn workspace @maple-testimony/functions build:watch'
     working_dir: /app
     volumes:
       - ..:/app
+      - unplugged:/app/.yarn/unplugged/
 
   next:
     build:
       context: ..
       dockerfile: infra/Dockerfile
-      target: firebase
-    command: yarn dev
+      target: next
+    command: sh -c 'yarn --immutable && yarn dev'
     working_dir: /app
     ports:
       - 3000:3000
     volumes:
       - ..:/app
+      - unplugged:/app/.yarn/unplugged/
 
-      # Prevent host node_modules from overriding the image modules.
-      - /app/node_modules/
-      - /app/functions/node_modules/
     environment:
       NEXT_PUBLIC_TYPESENSE_SEARCH_API_KEY: test-api-key
       NEXT_PUBLIC_TYPESENSE_API_URL: http://localhost:8108
@@ -79,3 +71,4 @@ services:
 
 volumes:
   search: {}
+  unplugged: {}

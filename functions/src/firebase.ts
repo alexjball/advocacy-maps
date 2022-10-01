@@ -1,6 +1,8 @@
 import * as admin from "firebase-admin"
 
-admin.initializeApp()
+admin.initializeApp({
+  storageBucket: `${process.env.GCLOUD_PROJECT}.appspot.com`
+})
 export const db = admin.firestore()
 export const storage = admin.storage()
 export const auth = admin.auth()

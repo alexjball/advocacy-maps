@@ -3,7 +3,14 @@ import { deleteApp } from "firebase/app"
 import { clearIndexedDbPersistence, terminate } from "firebase/firestore"
 import { app, firestore } from "../components/firebase"
 
-if (!admin.apps) admin.initializeApp()
+try {
+  admin.initializeApp({
+    storageBucket: `${process.env.GCLOUD_PROJECT}.appspot.com`
+  })
+} catch (e) {
+  // TODO: only initialize once. Currently conflicts with functions initialization
+  console.warn(e)
+}
 
 export const testDb = admin.firestore()
 export const testStorage = admin.storage()

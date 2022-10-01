@@ -5,3 +5,12 @@ out
 storybook-static
 .gitsecret
 .git
+.yarn/cache
+.yarn/unplugged
+.yarn/install-state.gz
+infra
+.github
+.swc
+.vscode
+analysis
+tests

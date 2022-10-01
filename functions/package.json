@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "build": "yarn g:clean-build && yarn copy-files",
-    "build-all": "tsc --build && yarn copy-files",
-    "build:watch": "yarn copy-files && tsc --build --watch --preserveWatchOutput",
+    "build-all": "yarn g:tsc --build && yarn copy-files",
+    "build:watch": "yarn copy-files && yarn g:tsc --build --watch --preserveWatchOutput",
     "copy-files": "copyfiles -u 1 src/ssl/* dist/",
     "enable-cors-dev": "gsutil cors set cors.json gs://digital-testimony-dev.appspot.com",
     "enable-cors-prod": "gsutil cors set cors.json gs://digital-testimony-prod.appspot.com",
