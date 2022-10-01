@@ -1,4 +1,4 @@
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook, waitFor } from "@testing-library/react"
 import { flattenDeep } from "lodash"
 import { FilterOptions, SortOptions, useBills } from "../../components/db"
 import { terminateFirebase } from "../testUtils"
@@ -31,7 +31,7 @@ describe("useBills", () => {
   it.each(cases)(
     "lists for sort $sort, filter $filter",
     async ({ sort, filter }) => {
-      const { result, waitFor } = renderHook(() => useBills())
+      const { result } = renderHook(() => useBills())
 
       act(() => {
         result.current.setFilter(filter)

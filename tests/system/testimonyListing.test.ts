@@ -1,10 +1,10 @@
-import { renderHook, act } from "@testing-library/react-hooks"
+import { act, renderHook, waitFor } from "@testing-library/react"
+import { flattenDeep } from "lodash"
 import {
   TestimonyFilterOptions,
   usePublishedTestimonyListing
 } from "../../components/db/testimony"
 import { terminateFirebase, testAuth } from "../testUtils"
-import { flattenDeep } from "lodash"
 
 afterAll(terminateFirebase)
 
@@ -34,7 +34,7 @@ describe("usePublishedTestimonyListing", () => {
       if (user) {
         ;({ uid } = await testAuth.getUserByEmail(user))
       }
-      const { result, waitFor } = renderHook(() =>
+      const { result } = renderHook(() =>
         usePublishedTestimonyListing({ billId: bill, uid })
       )
       act(() => void result.current.setFilter(filter))

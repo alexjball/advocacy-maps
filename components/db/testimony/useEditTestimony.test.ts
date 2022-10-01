@@ -1,5 +1,4 @@
-import { waitFor } from "@testing-library/react"
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook, waitFor } from "@testing-library/react"
 import { User } from "firebase/auth"
 import { DraftTestimony, Testimony, useEditTestimony } from "."
 import {

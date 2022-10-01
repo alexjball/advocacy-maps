@@ -1,4 +1,4 @@
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook, waitFor } from "@testing-library/react"
 import { DateTime } from "luxon"
 import { useBills } from "."
 import { terminateFirebase, testDb } from "../../tests/testUtils"
@@ -10,7 +10,7 @@ afterAll(terminateFirebase)
 
 describe("useBills", () => {
   it("fetches bills", async () => {
-    const { waitFor, result } = renderHook(() => useBills())
+    const { result } = renderHook(() => useBills())
 
     expect(result.current.pagination.currentPage).toBe(1)
     expect(result.current.items.loading).toBe(true)
@@ -24,7 +24,7 @@ describe("useBills", () => {
   })
 
   it("paginates", async () => {
-    const { waitFor, result } = renderHook(() => useBills())
+    const { result } = renderHook(() => useBills())
     await waitFor(() => expect(result.current.items.result).toBeDefined())
 
     // Move to the next page
@@ -45,7 +45,7 @@ describe("useBills", () => {
   })
 
   it("filters by billId", async () => {
-    const { waitFor, result } = renderHook(() => useBills())
+    const { result } = renderHook(() => useBills())
 
     await waitFor(() => expect(result.current.items.loading).toBeFalsy())
 
@@ -112,7 +112,7 @@ describe("useBills", () => {
 })
 
 async function renderWithSort(sort: any) {
-  const { waitFor, result } = renderHook(() => useBills())
+  const { result } = renderHook(() => useBills())
   act(() => void result.current.setSort(sort))
   await waitFor(() => expect(result.current.items.loading).toBeFalsy())
 

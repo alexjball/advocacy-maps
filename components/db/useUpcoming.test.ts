@@ -1,10 +1,9 @@
-import { renderHook } from "@testing-library/react-hooks"
-import { terminateFirebase } from "../../tests/testUtils"
-import { useUpcomingBills } from "./useUpcomingBills"
-
+import { renderHook, waitFor } from "@testing-library/react"
 import { DateTime } from "luxon"
+import { terminateFirebase } from "../../tests/testUtils"
 import { midnight } from "./common"
 import { useUpcomingEvents } from "./events"
+import { useUpcomingBills } from "./useUpcomingBills"
 
 const mockedMidnight = jest.mocked(midnight)
 
@@ -16,7 +15,7 @@ describe("useUpcomingBills", () => {
     const cutoff = DateTime.utc(2022, 3, 8)
     mockedMidnight.mockReturnValue(cutoff.toJSDate())
 
-    const { waitFor, result } = renderHook(() => useUpcomingBills())
+    const { result } = renderHook(() => useUpcomingBills())
 
     await waitFor(() => expect(result.current).not.toHaveLength(0))
   })
@@ -28,7 +27,7 @@ describe("useUpcomingEvents", () => {
     const cutoff = DateTime.utc(2022, 3, 8)
     mockedMidnight.mockReturnValue(cutoff.toJSDate())
 
-    const { waitFor, result } = renderHook(() => useUpcomingEvents())
+    const { result } = renderHook(() => useUpcomingEvents())
 
     await waitFor(() => expect(result.current).not.toHaveLength(0))
   })
