@@ -41,7 +41,7 @@ const handleFailure = (name: string, e: any, ...json: any) => {
   throw e
 }
 
-export const api = (() => {
+export const dbService = (() => {
   let service: DbService | undefined
   return () => {
     if (!service) service = new DbService()
