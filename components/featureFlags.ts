@@ -1,19 +1,26 @@
 import { z } from "zod"
+import { cloneDeep } from "lodash"
 
 export const FeatureFlags = z.object({
-  testimonyDiffing: z.boolean().default(false)
+  testimonyDiffing: z.boolean(),
+  formatBillTextAsMarkdown: z.boolean()
 })
-export type FeatureFlags = z.infer<typeof FeatureFlags>
+export type FeatureFlags = z.output<typeof FeatureFlags>
+
+const baseDefaults: FeatureFlags = {
+  testimonyDiffing: false,
+  formatBillTextAsMarkdown: false
+}
 
 const defaults: Record<typeof process.env.NODE_ENV, FeatureFlags> = {
   development: {
-    testimonyDiffing: false
+    ...cloneDeep(baseDefaults)
   },
   production: {
-    testimonyDiffing: false
+    ...cloneDeep(baseDefaults)
   },
   test: {
-    testimonyDiffing: false
+    ...cloneDeep(baseDefaults)
   }
 }
 

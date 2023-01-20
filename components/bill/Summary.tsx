@@ -1,4 +1,6 @@
+import { flags } from "components/featureFlags"
 import * as links from "components/links"
+import { formatTestimony } from "components/testimony"
 import { useState } from "react"
 import styled from "styled-components"
 import { Button, Col, Container, Modal, Row } from "../bootstrap"
@@ -47,7 +49,13 @@ export const Summary = ({
   const [showBillDetails, setShowBillDetails] = useState(false)
   const handleShowBillDetails = () => setShowBillDetails(true)
   const handleHideBillDetails = () => setShowBillDetails(false)
-  const billText = bill?.content?.DocumentText
+  const rawContent = bill.content.DocumentText
+
+  const billContent = flags().formatBillTextAsMarkdown ? (
+    <div dangerouslySetInnerHTML={formatTestimony(rawContent)}></div>
+  ) : (
+    <FormattedBillDetails>{rawContent}</FormattedBillDetails>
+  )
 
   return (
     <SummaryContainer className={className}>
@@ -55,7 +63,7 @@ export const Summary = ({
         <TitleFormat>
           {bill.content.Title}
           <div className="d-flex justify-content-end">
-            {billText ? (
+            {rawContent ? (
               <StyledButton
                 variant="link"
                 className="m-1"
@@ -81,11 +89,7 @@ export const Summary = ({
             <Modal.Header closeButton onClick={handleHideBillDetails}>
               <Modal.Title>{bill?.id}</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-              <FormattedBillDetails>
-                {bill?.content?.DocumentText}
-              </FormattedBillDetails>
-            </Modal.Body>
+            <Modal.Body>{billContent}</Modal.Body>
           </Modal>
         </TitleFormat>
 
