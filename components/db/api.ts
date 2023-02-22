@@ -11,6 +11,7 @@ import {
   limit,
   orderBy,
   query,
+  startAfter,
   where
 } from "firebase/firestore"
 import { first } from "lodash"
@@ -110,7 +111,34 @@ export class DbService {
       return undefined
     }
   }
+
+  // TODO(gerlinp): complete
+  getNotifications = async ({
+    uid,
+    limit: docLimit,
+    startAfterId
+  }: {
+    uid: string
+    limit: number
+    startAfterId: string
+  }): Promise<any> => {
+    const result = await this.getDocs(
+      query(
+        collection(firestore, `/users/${uid}/userNotificationFeed`),
+        orderBy("eventTime", "desc"),
+        limit(docLimit),
+        startAfter(startAfterId)
+      )
+    )
+    const notifications = result.docs
+      .map(snap => snap.data())
+      .filter(isNotNull) as Notification[]
+    return notifications
+  }
 }
+
+// TODO: flesh out
+type Notification = {}
 
 export const api = createApi({
   reducerPath: "api",
