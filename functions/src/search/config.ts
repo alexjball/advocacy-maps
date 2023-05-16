@@ -18,3 +18,6 @@ export const registerConfig = (config: CollectionConfig) => {
   registered.push(config)
 }
 export const getRegisteredConfigs = () => registered
+
+export const isTypesenseConfigured = () =>
+  Boolean(process.env.TYPESENSE_API_URL)

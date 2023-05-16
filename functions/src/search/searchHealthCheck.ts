@@ -1,5 +1,6 @@
 import { runWith } from "firebase-functions"
 import { createClient } from "./client"
+import { isTypesenseConfigured } from "./config"
 
 const connectionTimeoutSeconds = 5,
   numRetries = 2,
@@ -18,6 +19,7 @@ export const searchHealthCheck = runWith({
     retryCount: 0
   })
   .onRun(async () => {
+    if (!isTypesenseConfigured()) return
     const client = createClient({
       connectionTimeoutSeconds,
       numRetries

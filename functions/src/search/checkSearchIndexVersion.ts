@@ -1,5 +1,5 @@
 import { runWith } from "firebase-functions"
-import { getRegisteredConfigs } from "./config"
+import { getRegisteredConfigs, isTypesenseConfigured } from "./config"
 import { SearchIndexer } from "./SearchIndexer"
 
 /** Schedules index upgrades for each config if necessary. Requires a message
@@ -9,6 +9,7 @@ export const checkSearchIndexVersion = runWith({
 })
   .pubsub.topic("checkSearchIndexVersion")
   .onPublish(async message => {
+    if (!isTypesenseConfigured()) return
     if (message.json.check !== true)
       throw Error('Expected { "check": true } message')
     for (const config of getRegisteredConfigs()) {

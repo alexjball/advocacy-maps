@@ -1,5 +1,10 @@
 import { runWith } from "firebase-functions"
-import { BaseRecord, CollectionConfig, registerConfig } from "./config"
+import {
+  BaseRecord,
+  CollectionConfig,
+  isTypesenseConfigured,
+  registerConfig
+} from "./config"
 import { SearchIndexer } from "./SearchIndexer"
 
 export function createSearchIndexer<T extends BaseRecord = BaseRecord>(
@@ -13,6 +18,7 @@ export function createSearchIndexer<T extends BaseRecord = BaseRecord>(
     })
       .firestore.document(SearchIndexer.upgradePath(config.alias))
       .onCreate(async snap => {
+        if (!isTypesenseConfigured()) return
         await new SearchIndexer(config).performUpgrade(snap.data())
       }),
     syncToSearchIndex: runWith({
@@ -21,6 +27,7 @@ export function createSearchIndexer<T extends BaseRecord = BaseRecord>(
     })
       .firestore.document(config.documentTrigger)
       .onWrite(async change => {
+        if (!isTypesenseConfigured()) return
         await new SearchIndexer(config).syncDocument(change)
       })
   }
