@@ -36,6 +36,7 @@ export const Testimony = withDefaults(
     billTitle: RtString,
     version: Number,
     publishedAt: InstanceOf(Timestamp),
+    updatedAt: InstanceOf(Timestamp),
     representativeId: Optional(RtString),
     senatorId: Optional(RtString),
     senatorDistrict: Optional(RtString),
@@ -48,6 +49,7 @@ export const Testimony = withDefaults(
     // ID is backfilled
     id: "unknown",
     publishedAt: Timestamp.fromMillis(0),
+    updatedAt: Timestamp.fromMillis(0),
     authorDisplayName: "Anonymous",
     fullName: "Anonymous",
     billTitle: ""
@@ -76,6 +78,7 @@ export const TestimonySearchRecord = R({
   authorDisplayName: RtString,
   version: Number,
   publishedAt: Number,
+  updatedAt: Number,
   fullName: RtString
 })
 export type TestimonySearchRecord = Static<typeof TestimonySearchRecord>
